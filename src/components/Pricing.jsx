@@ -1,5 +1,5 @@
-export default function Pricing() {
+export default function Pricing({ itemsInBasket }) {
     return (
-        <div>Pricing</div>
+        <p className="mx-3">{itemsInBasket ? itemsInBasket : 'Add an Item'}</p>
     )
 }
