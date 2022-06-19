@@ -1,7 +1,11 @@
+import Items from "./components/Items";
+import Pricing from "./components/Pricing";
+
 export default function App() {
   return (
-    <div className="App">
-      <p>Hello World</p>
+    <div className="flex">
+      <Items />
+      <Pricing />
     </div>
   )
 }
