@@ -5,9 +5,9 @@ export default function Pricing() {
     const itemsInBasket = useSelector(state => state.basket.items)
 
     return (
-        <div className="flex flex-col justify-between">
-        <p className="mx-3">{itemsInBasket.length > 0 ? itemsInBasket[0].name : 'Add an Item'}</p>
-        <p className="mx-3">Total</p>
+        <div className="min-w-[15%] items-center text-center">
+        <p className="mx-3 text-2xl font-semibold underline mb-3">{`Total - ${itemsInBasket.map(item => item.price).reduce((prev, current) => prev + current, 0)/100}`}</p>
+        <p className="mx-3">{itemsInBasket.length > 0 ? itemsInBasket.map(item => <p>{`${item.name} - ${item.price / 100}`}</p>) : 'Add an Item'}</p>
         </div>
     )
 }
