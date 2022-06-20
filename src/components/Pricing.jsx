@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 
 export default function Pricing() {
 
-    const itemsInBasket = useSelector(state => state.basket.items)
+    const itemsInBasket = useSelector(state => state.items.basket)
 
     return (
         <div className="min-w-[15%] items-center text-center">
