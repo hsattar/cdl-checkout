@@ -7,6 +7,10 @@ const itemsReducer = (state = initialState.items, action) => {
             ...state,
             basket: [...state.basket, action.payload]
         }
+        case ACTIONS.CHNAGE_ITEM_OFFER: return {
+            ...state,
+            stock: state.stock.map(item => item.name === action.payload.name ? action.payload : item)
+        }
         default: return state
     }
 }
