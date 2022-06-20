@@ -1,7 +1,12 @@
-export default function SingleItem({ item, setItemsInBasket }) {
+import { useDispatch } from "react-redux"
+import { addItemToBasketAction } from "../redux/actions"
+
+export default function SingleItem({ item }) {
+
+    const dispatch = useDispatch()
 
     const handleClick = () => {
-        setItemsInBasket(itemsInBasket => [...itemsInBasket, item])
+        dispatch(addItemToBasketAction(item))
     }
     
     return (
