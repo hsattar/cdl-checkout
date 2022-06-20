@@ -1,13 +1,13 @@
 import SingleItem from "./SingleItem"
 
-export default function Items() {
+export default function Items({ setItemsInBasket }) {
 
     const items = [{name: "A", price: 50}, {name: "B", price: 30}, {name: "C", price: 20}, {name: "D", price: 15}]
     
     return (
         <div className="grow">
             <div className="grid grid-cols-2">
-                { items.map((item, index) => <SingleItem key={index} item={item} /> ) }
+                { items.map((item, index) => <SingleItem key={index} item={item} setItemsInBasket={setItemsInBasket} /> ) }
             </div>
         </div>
     )
